@@ -1,13 +1,9 @@
-// const User = require('./User');
-// const Project = require('./Project');
+const router = require('express').Router();
 
-// User.hasMany(Project, {
-//   foreignKey: 'user_id',
-//   onDelete: 'CASCADE'
-// });
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
 
-// Project.belongsTo(User, {
-//   foreignKey: 'user_id'
-// });
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 
-// module.exports = { User, Project };
+module.exports = router;
