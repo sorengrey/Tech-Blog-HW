@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/sorengrey/Tech-Blog-HW#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "path": "^0.12.7",
+    "routes": "^2.1.0",
     "sequelize": "^6.6.1"
   }
 }
