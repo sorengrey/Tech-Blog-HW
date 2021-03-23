@@ -1,16 +1,21 @@
 {
-  "name": "crowd-funding",
+  "name": "tech-blog-hw",
   "version": "1.0.0",
-  "description": "",
+  "description": "A blog site meant for discussing the latest in technology.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorengrey/Tech-Blog-HW.git"
+  },
+  "author": "Heather Smith -- halexsmith86@gmail.com",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorengrey/Tech-Blog-HW/issues"
+  },
+  "homepage": "https://github.com/sorengrey/Tech-Blog-HW#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
@@ -20,10 +25,5 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
-  },
-  "devDependencies": {
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.15.0",
-    "prettier": "^2.1.2"
   }
 }
