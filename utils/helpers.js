@@ -1,5 +1,3 @@
-// This was copied from the miniproject and has not been edited yet
-
 module.exports = {
   format_date: (date) => {
     // Format date as MM/DD/YYYY

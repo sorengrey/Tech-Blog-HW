@@ -1,2 +1,3 @@
 node_modules
-14-mvc-homework-demo-01
+.env
+.DS_Store
