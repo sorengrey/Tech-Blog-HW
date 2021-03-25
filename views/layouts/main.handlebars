@@ -27,7 +27,7 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Dashboard</a>
+            <a class="nav-link active" href="/profile">Dashboard</a>
           </li>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
@@ -57,7 +57,7 @@
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
     <div class="col-md-7">
-    <button>+ New Post</button>
+    <a href="/profile"><button>+ New Post</button></a>
   </div>
   <script src="/js/logout.js"></script>
   {{/if}}
