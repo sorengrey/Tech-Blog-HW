@@ -54,12 +54,11 @@
     {{{ body }}}
   </main>
 
-  {{!-- <footer>
-  </footer> --}}
-
-
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
+    <div class="col-md-7">
+    <button>+ New Post</button>
+  </div>
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
