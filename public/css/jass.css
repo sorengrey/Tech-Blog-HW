@@ -28,6 +28,15 @@ main {
   display: block;
 }
 
+.titlebutton {
+  padding-bottom: 10px;
+  background-color: black;
+}
+
+.titleholder {
+  background-color: grey;
+  border-radius: 15px 25px;
+} 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -1164,16 +1173,16 @@ form [type='radio'] {
   display: inline-block;
 }
 
-.container {
+/* .container {
   width: 85%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
-.container.container-fluid {
+/* .container.container-fluid {
   width: 92%;
-}
+} */
 
 /* FLEX CONTENT */
 .flex-row {
