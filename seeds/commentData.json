@@ -1,3 +1,7 @@
 [
-    {}
+    {
+        "content": "this is a comment",
+        "user_id": 1,
+        "blog_id": 3
+    }
 ]

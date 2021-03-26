@@ -31,7 +31,6 @@
           </li>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-          {{!-- <a href="/profile">Profile</a> | --}}
           <a class="nav-link active" href="#" id="logout">Logout</a>
           {{else}}
           <a class="nav-item">
@@ -45,8 +44,9 @@
 
   <div class="titlebutton" style="color:white">
     <!-- This needs to change to Dashboard dynamically - use handlebars? -->
-    <button type="button" class="btn btn-primary titleholder"><h1>The Tech Blog</h1>
-    </div>
+    <button type="button" class="btn btn-primary titleholder">
+      <h1>The Tech Blog</h1>
+  </div>
   </div>
 
   <main class="container container-fluid mt-5">
@@ -56,7 +56,7 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-    <div class="col-md-7">
+  <div class="col-md-7">
     <a href="/profile"><button>+ New Post</button></a>
   </div>
   <script src="/js/logout.js"></script>
