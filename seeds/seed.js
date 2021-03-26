@@ -5,12 +5,17 @@ const userData = require('./userData');
 const blogData = require('./blogData');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
-  await userData;
-  console.log('\n----- User Data SEEDED -----\n');
-  await blogData;
-  console.log('\n----- Blog Data SEEDED -----\n');
+    await sequelize.sync({ force: true });
+    const users = await User.bulkCreate(userData, {
+      individualHooks: true,
+      returning: true,
+    });
+  
+    for (const blog of blogData) {
+      await Blog.create({
+        ...blog,
+      });
+    }
   
   process.exit(0);
   };
