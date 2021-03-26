@@ -1,4 +1,6 @@
-[
+const { Blog } = require('../models');
+
+const blogData = [
   {
     "title": "Music Near Me",
     "content": "A mobile app that will send you notifications whenever a concert is playing in your area.",
@@ -15,3 +17,7 @@
     "user_id": 1
   }
 ]
+
+const seedBlogs = () => Blog.bulkCreate(blogData);
+
+module.exports = seedBlogs;

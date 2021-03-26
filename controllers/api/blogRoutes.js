@@ -2,12 +2,6 @@ const router = require('express').Router();
 const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// This doesn't work
-router.get('/blog', withAuth, async (req, res) => {
-  res.render('blog')
-})
-
-
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPost = await Blog.create({
