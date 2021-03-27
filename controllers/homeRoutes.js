@@ -13,20 +13,19 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-    
+
     // Serialize data so the template can read it
     const blogs = blogData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      blogs, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      blogs,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 router.get('/blog/:id', async (req, res) => {
   try {
@@ -43,7 +42,7 @@ router.get('/blog/:id', async (req, res) => {
 
     res.render('blog', {
       ...blog,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -69,14 +68,14 @@ router.get('/profile', withAuth, async (req, res) => {
         },
       ],
     });
-    
+
     // Serialize data so the template can read it
     const blogs = blogData.map((post) => post.get({ plain: true }));
 
     res.render('profile', {
       ...user,
       blogs,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -95,7 +94,7 @@ router.get('/', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -110,6 +109,15 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+
+router.get('/comment', (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+  } else {
+    res.render('comment', { logged_in: req.session.logged_in });
+  }
 });
 
 module.exports = router;
