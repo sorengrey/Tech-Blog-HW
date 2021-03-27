@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 router.get('/blog/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -60,8 +61,21 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
+    const blogData = await Blog.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+    
+    // Serialize data so the template can read it
+    const blogs = blogData.map((post) => post.get({ plain: true }));
+
     res.render('profile', {
       ...user,
+      blogs,
       logged_in: true
     });
   } catch (err) {
