@@ -13,7 +13,7 @@
   <div class="row ps-4">
     <div class="col-md-6 title-row">
       {{blog.title}} -- Posted by {{blog.user.name}}
-      on {{format_date blog.date_created}}
+      on {{format_date blog.created_at}}
     </div>
   </div>
   <div class="row ps-4">
@@ -33,3 +33,5 @@
   </div>
 </div>
   {{/each}}
+
+<script src="./js/comment.js"></script>
