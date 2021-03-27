@@ -1,37 +1,35 @@
 <!-- Render new post button for logged in users only -->
 {{#if logged_in}}
-  <div class="row new-post-button">
-      <a href="/profile"><button style="color: white; background-color: rgb(20, 85, 20);">+ New Post</button></a>
-    </div>
+<div class="row new-post-button">
+  <a href="/profile"><button style="color: white; background-color: rgb(20, 85, 20);">+ New Post</button></a>
+</div>
 
-  {{/if}}
-  
-  <!-- Loop over each object in the blog array -->
+{{/if}}
 
-  {{#each blogs as |blog| }}
-  <div class="container container-fluid mt-5">
-  <div class="row">
-     
-    <div class="col-sm-6 title-row">
+<!-- Loop over each object in the blog array -->
+
+{{#each blogs as |blog| }}
+<div class="container container-fluid mt-5">
+  <div class="row ps-4">
+    <div class="col-md-6 title-row">
       {{blog.title}} -- Posted by {{blog.user.name}}
       {{!-- on {{format_date blog.date_created}} --}}
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-6 content-row">
+  <div class="row ps-4">
+    <div class="col-md-6 content-row">
       <p>{{blog.content}}</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row ps-4">
     <div class="col-sm-6 comment-section">
       <p>Comments</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row ps-4">
     <div class="col-sm-6">
       <p>{{blog.comment.content}}</p>
     </div>
   </div>
+</div>
   {{/each}}
-</div>
-</div>

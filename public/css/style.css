@@ -5,7 +5,8 @@
 }
 
 .content-row {
-    background-color:rgb(158, 194, 158)
+    background-color:rgb(158, 194, 158);
+    padding-top: 5px;
 }
 
 .comment-section {
@@ -20,6 +21,7 @@ button {
     border-radius: 10px;
 }
 
-.float {
-    float: left;
+.title-row {
+    padding-top: 20px;
 }
+
