@@ -20,28 +20,28 @@
 
 
   <div class="col-md-6">
-    <h2>Recent Posts</h2>
+    <h3>Recent Posts</h3>
 
     <!-- Loop over each object in the blog array -->
     {{#each blogs as |blog| }}
     <div class="row ps-3">
-      <div class="col-sm-6 title-row">
+      <div class="col-sm-8 title-row">
         {{blog.title}} -- Posted by {{blog.user.name}}
         {{!-- on {{format_date blog.date_created}} --}}
       </div>
     </div>
     <div class="row ps-3">
-      <div class="col-sm-6 content-row">
+      <div class="col-sm-8 content-row">
         <p>{{blog.content}}</p>
       </div>
     </div>
     <div class="row ps-3">
-      <div class="col-sm-6 comment-section">
+      <div class="col-sm-8 comment-section">
         <p>Comments</p>
       </div>
     </div>
     <div class="row ps-3">
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <p>{{blog.comment.content}}</p>
       </div>
     </div>
