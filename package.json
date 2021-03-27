@@ -1,7 +1,7 @@
 {
   "name": "tech-blog-hw",
   "version": "1.0.0",
-  "description": "A blog site meant for discussing the latest in technology.",
+  "description": "A blog site for the discussion of the latest in technology.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

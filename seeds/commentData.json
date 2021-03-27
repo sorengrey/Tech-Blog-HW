@@ -1,7 +1,12 @@
 [
     {
-        "content": "this is a comment",
+        "content": "I heard this might get scrapped.",
         "user_id": 1,
+        "blog_id": 1
+    },
+    {
+        "content": "Is there life on Maaaars?",
+        "user_id": 2,
         "blog_id": 3
     }
 ]

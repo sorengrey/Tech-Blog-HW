@@ -1,6 +1,6 @@
 <!-- Render new post button for logged in users only -->
 {{#if logged_in}}
-<div class="row new-post-button">
+<div class="flex-row new-post-button">
   <a href="/profile"><button style="color: white; background-color: rgb(20, 85, 20);">+ New Post</button></a>
 </div>
 
@@ -27,11 +27,12 @@
     </div>
   </div>
   <div class="row ps-4">
+    {{#each comment as |comment| }}
     <div class="col-sm-6">
       <p>{{blog.comment.content}}</p>
     </div>
+    {{/each}}
   </div>
 </div>
-  {{/each}}
+{{/each}}
 
-<script src="./js/comment.js"></script>
