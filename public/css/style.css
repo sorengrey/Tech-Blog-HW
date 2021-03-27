@@ -1,1 +1,25 @@
 
+.title-row {
+    color: white;
+    background-color: rgb(20, 85, 20);
+}
+
+.content-row {
+    background-color:rgb(158, 194, 158)
+}
+
+.comment-section {
+    background-color:rgb(201, 231, 201)
+}
+
+.new-post-button {
+    float: left;
+}
+
+button {
+    border-radius: 10px;
+}
+
+.float {
+    float: left;
+}

@@ -1,40 +1,40 @@
-<!-- Loop over each object in the blog array -->
-{{#each blogs as |blog| }}
-<div class="row mb-4 blog">
-  <div class="col-md-5">
-    <h2>Test
-      <!-- Call helper function with triple brackets to render the span as HTML -->
-      {{!-- <a href="/profile/{{blog.id}}">{{blog.title}}</a> --}}
-      <div class="col-md-6">
-    <h2>Recent Posts</h2>
+<!-- Render new post button for logged in users only -->
+{{#if logged_in}}
+
+  <div class="row">
+      <a href="/profile"><button style="color: white; background-color: rgb(20, 85, 20);">+ New Post</button></a>
+    </div>
+
+  {{/if}}
   
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-md-12">
-          {{blog.title}} posted by {{blog.User.name}}
-        
-          {{!-- on {{format_date blog.date_created}} --}}
-        </div>
-    </div>
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <p>{{blog.content}}</p>
-        </div>
-    </div>
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <p>Comments</p>
-        </div>
-    </div>
-    {{!-- {{#each blogs as |blog| }}
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <p style="color: rgb(0, 0, 0); font-size: small;">{{blog.comment.content}}</p><hr style="color: white;">
-        </div>
-    </div> --}}
-      {{/each}}
+
+
+  <!-- Loop over each object in the blog array -->
+
+  {{#each blogs as |blog| }}
+  <div class="container container-fluid mt-5">
+  <div class="row">
+     
+    <div class="col-sm-4 title-row">
+      {{blog.title}} -- Posted by {{blog.user.name}}
+      {{!-- on {{format_date blog.date_created}} --}}
     </div>
   </div>
-    </h2>
+  <div class="row">
+    <div class="col-sm-4 content-row">
+      <p>{{blog.content}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 comment-section">
+      <p>Comments</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>{{blog.comment.content}}</p>
+    </div>
+  </div>
+  {{/each}}
 </div>
-
+</div>

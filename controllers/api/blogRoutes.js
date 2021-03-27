@@ -14,6 +14,18 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.post('/profile', withAuth, async (req, res) => {
+  try {
+    const newPost = await Blog.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+    res.status(200).json(newPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.destroy({

@@ -16,7 +16,6 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
-      {{!-- <a class="navbar-brand" href="#">The Tech Blog</a> --}}
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,24 +42,15 @@
   </nav>
 
   <div class="titlebutton" style="color:white">
-    <!-- This needs to change to Dashboard dynamically - use handlebars? -->
     <button type="button" class="btn btn-primary titleholder">
       <h1>The Tech Blog</h1>
+  </button>
   </div>
-  </div>
-
-  <main class="container container-fluid mt-5">
+  
+  <main>
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <div class="col-md-7">
-    <a href="/profile"><button>+ New Post</button></a>
-  </div>
-  <script src="/js/logout.js"></script>
-  {{/if}}
 </body>
 
 </html>
