@@ -28,8 +28,8 @@
   
   {{#each comments as |comment| }} 
   <div class="row ps-4">
-    <div class="col-sm-6">
-      <p>{{comment.content}} posted by {{comment.user.name}}</p> 
+    <div class="col-sm-6 comment-section">
+      <p>{{comment.content}} -- Posted by {{comment.user.name}}</p> 
      {{!-- <button type="button" class="btn btn-success post-comment">Post A Comment</button> --}}
     </div>
   </div>
