@@ -1,13 +1,11 @@
 <!-- Render new post button for logged in users only -->
 {{#if logged_in}}
-<div class="flex-row new-post-button">
-  <a href="/profile"><button style="color: white; background-color: rgb(20, 85, 20);">+ New Post</button></a>
-</div>
-
+  <div class="flex-row new-post-button">
+   <a href="/profile"><button style="color: white; background-color: rgb(20, 85, 20);">+ New Post</button></a>
+  </div>
 {{/if}}
 
 <!-- Loop over each object in the blog array -->
-
 {{#each blogs as |blog| }}
 <div class="container container-fluid mt-5">
   <div class="row ps-4">
@@ -21,18 +19,21 @@
       <p>{{blog.content}}</p>
     </div>
   </div>
+  <!-- Comment Section-->
   <div class="row ps-4">
     <div class="col-sm-6 comment-section">
       <p>Comments</p>
     </div>
   </div>
+  
+  {{#each comments as |comment| }} 
   <div class="row ps-4">
-    {{#each comment as |comment| }}
     <div class="col-sm-6">
-      <p>{{blog.comment.content}}</p>
+      <p>{{comment.content}} posted by {{comment.user.name}}</p> 
+     {{!-- <button type="button" class="btn btn-success post-comment">Post A Comment</button> --}}
     </div>
-    {{/each}}
   </div>
+   {{/each}}
 </div>
 {{/each}}
-
+<script src="./js/comment.js"></script>
